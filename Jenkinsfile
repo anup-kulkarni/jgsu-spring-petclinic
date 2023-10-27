@@ -7,8 +7,10 @@ echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
 echo env.BRANCH_NAME;
 
-properties([
-  parameters([
-    choice(name: 'SKIP_UNIT_TESTS', choices:['No', 'Yes']),
-  ])
-])
+      if(env.BRANCH_NAME == releaseBranch || env.BRANCH_NAME == trunkBranch) {
+        def sanitizedBranchName = env.BRANCH_NAME.replaceAll("feature/", "").replaceAll("bugfix/", "").replaceAll("hotfix/", "").toLowerCase();
+      } else {
+        def sanitizedBranchName = featureBranch;
+      }
+
+echo sanitizedBranchName
