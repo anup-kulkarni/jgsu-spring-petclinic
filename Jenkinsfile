@@ -5,8 +5,12 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-env.each() { param, value ->
-  print "Parameter: ${param}, Value: ${value}"
-}
+{
+  properties([
+    parameters([
+      choice(name: 'OVERRIDE_AND_DEPLOY', choices: ['false', 'true']),
+      
+    ])
+  ])
 
 
