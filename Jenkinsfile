@@ -5,12 +5,6 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-{
-  properties([
-    parameters([
-      choice(name: 'OVERRIDE_AND_DEPLOY', choices: ['false', 'true']),
-      
-    ])
-  ])
+echo env_BRANCH_NAME
 
 
