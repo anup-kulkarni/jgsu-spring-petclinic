@@ -1,5 +1,5 @@
 def label = "mypod-${UUID.randomUUID().toString()}"
-trunkBranch = "master";
+trunkBranch = "main";
 releaseBranch = 'release/candidate';
 featureBranch = 'featurebranch'
 List<String> imageTagsToPush = [];
