@@ -5,6 +5,8 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-echo sh(script: 'env|sort', returnStdout: true);
+params.each() { param, value ->
+  print "Parameter: ${param}, Value: ${value}"
+}
 
 
