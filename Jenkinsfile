@@ -1,11 +1,11 @@
 def label = "mypod-${UUID.randomUUID().toString()}"
 trunkBranch = "master";
 releaseBranch = 'release/candidate';
-List<String> imageTagsToPush = []
+List<String> imageTagsToPush = [];
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-echo env.BRANCH_NAME
+echo env.BRANCH_NAME;
 
 // Initializing Nodejs
 {
