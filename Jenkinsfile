@@ -8,7 +8,7 @@ echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 echo env.BRANCH_NAME
 
 // Initializing Nodejs
-
+{
   properties([
     parameters([
       choice(name: 'OVERRIDE_AND_DEPLOY', choices: ['false', 'true']),
@@ -37,3 +37,4 @@ echo env.BRANCH_NAME
     ])
   ])
 
+}
