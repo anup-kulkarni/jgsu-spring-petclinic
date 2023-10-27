@@ -5,6 +5,6 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-echo env_BRANCH_NAME
+echo env.BRANCH_NAME
 
 
