@@ -6,34 +6,3 @@ List<String> imageTagsToPush = []
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
 echo env.BRANCH_NAME;
-
-// Initializing Nodejs
-{
-  properties([
-    parameters([
-      choice(name: 'OVERRIDE_AND_DEPLOY', choices: ['false', 'true']),
-      [
-        $class: "ChoiceParameter",
-        choiceType: 'PT_SINGLE_SELECT',
-        description: "Select the environment to deploy",
-        name: "Select the environment to deploy",
-        script: [
-          $class: 'GroovyScript',
-          script: [
-            classpath: [],
-            sandbox: false,            
-            script: '''
-                    if (env.BRANCH_NAME == releaseBranch) {
-                      return ["int: int"]
-                    } else if (env.BRANCH_NAME == trunkBranch) {
-                      return ["dev: dev", "deva: deva"]
-                    } else {
-                      return ["deva: deva"]
-                    }             
-            '''
-          ]
-        ]
-      ]
-    ])
-  ])
-}
