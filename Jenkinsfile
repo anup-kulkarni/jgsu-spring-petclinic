@@ -5,4 +5,6 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-echo env;
+echo sh(script: 'env|sort', returnStdout: true);
+
+
