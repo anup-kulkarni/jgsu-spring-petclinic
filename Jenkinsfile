@@ -3,7 +3,9 @@ trunkBranch = "master";
 releaseBranch = 'release/candidate';
 List<String> imageTagsToPush = []
 
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 
+echo env.BRANCH_NAME
 
 // Initializing Nodejs
 {
