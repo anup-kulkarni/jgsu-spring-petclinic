@@ -5,7 +5,7 @@ List<String> imageTagsToPush = []
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
-params.each() { param, value ->
+env.each() { param, value ->
   print "Parameter: ${param}, Value: ${value}"
 }
 
