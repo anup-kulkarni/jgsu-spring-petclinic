@@ -6,11 +6,11 @@ List<String> imageTagsToPush = [];
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
 echo env.BRANCH_NAME;
-
+def sanitizedBranchName = ""
       if(env.BRANCH_NAME == releaseBranch || env.BRANCH_NAME == trunkBranch) {
-        def sanitizedBranchName = env.BRANCH_NAME.replaceAll("feature/", "").replaceAll("bugfix/", "").replaceAll("hotfix/", "").toLowerCase();
+        sanitizedBranchName = env.BRANCH_NAME.replaceAll("feature/", "").replaceAll("bugfix/", "").replaceAll("hotfix/", "").toLowerCase();
       } else {
-        def sanitizedBranchName = featureBranch;
+        sanitizedBranchName = featureBranch;
       }
 
 echo sanitizedBranchName
